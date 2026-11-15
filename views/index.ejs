@@ -11,13 +11,34 @@
         <h1>WEB2 - Projekt 2</h1>
         <p>Demonstracija sigurnosnih ranjivosti</p>
 
-        <section>
-            <h2>1. SQL Injection</h2>
-        </section>
+
+    <section>
+        <h2>1. SQL Injection</h2>
+
+        <label>
+            <input type="checkbox" id="sqlVulnerable" checked>
+            Omogući SQL Injection ranjivost
+        </label>
+
+        <p>Pretraži bilješke prema korisničkom imenu:</p>
+
+        <input type="text" id="sqlUsername" placeholder="Unesi korisničko ime">
+
+        <button type="button" id="sqlButton">
+            Pretraži
+        </button>
+
+        <h3>Izvršeni SQL upit:</h3>
+        <pre id="sqlQuery"></pre>
+
+        <h3>Rezultati:</h3>
+        <div id="sqlResults"></div>
+    </section>
 
         <section>
             <h2>2. Broken Authentication</h2>
         </section>
     </main>
+    <script src="/script.js"></script>
 </body>
 </html>
