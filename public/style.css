@@ -1,0 +1,21 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: lightslategray;
+    margin: 0;
+    padding: 40px 20px;
+    color: black;
+}
+
+main {
+    max-width: 850px;
+    margin: auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
