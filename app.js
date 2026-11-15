@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const path = require("path");
-const pool = require("./db/database");
+const { pool, sqlPool } = require("./db/database");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,10 +34,10 @@ app.post("/sql-injection", async (req, res) => {
 
         if (isVulnerable) {
             query = `SELECT * FROM notes WHERE username = '${username}'`;
-            result = await pool.query(query);
+            result = await sqlPool.query(query);;
         } else {
             query = "SELECT * FROM notes WHERE username = $1";
-            result = await pool.query(query, [username]);
+            result = await sqlPool.query(query, [username]);
         }
 
         res.json({

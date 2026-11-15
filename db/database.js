@@ -4,4 +4,8 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL
 });
 
-module.exports = pool;
+const sqlPool = new Pool({
+    connectionString: process.env.DATABASE_READONLY_URL
+});
+
+module.exports = { pool, sqlPool };
