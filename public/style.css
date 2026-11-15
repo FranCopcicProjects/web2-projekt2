@@ -19,3 +19,8 @@ section {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
+
+div{
+    margin: 10px;
+    margin-left: 0px;
+}

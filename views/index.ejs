@@ -35,9 +35,51 @@
         <div id="sqlResults"></div>
     </section>
 
-        <section>
-            <h2>2. Broken Authentication</h2>
-        </section>
+
+    <section>
+        <h2>2. Broken Authentication</h2>
+
+        <label>
+            <input type="checkbox" id="authVulnerable" checked>
+            Omogući Broken Authentication ranjivost
+        </label>
+
+        <p>
+            Unesi korisničko ime i PIN ili pokreni
+            demonstraciju brute-force napada.
+        </p>
+        
+        <div>
+            <label for="authUsername">Korisničko ime:</label>
+            <input type="text" id="authUsername" placeholder="Unesi username">
+        </div>
+        
+        <div>
+            <label for="authPin">PIN:</label>
+            <input type="text" id="authPin" maxlength="4" inputmode="numeric" placeholder="Unesi PIN">
+        </div>
+
+        <div>
+            <button type="button" id="authLoginButton">
+                Prijavi se
+            </button>
+
+            <button type="button" id="authAttackButton">
+                Pokreni napad
+            </button>
+
+            <button type="button" id="authResetButton">
+                Resetiraj demonstraciju
+            </button>
+        </div>
+
+        <h3>Status:</h3>
+        <div id="authStatus"></div>
+
+        <h3>Pokušaji prijave:</h3>
+        <div id="authResults"></div>
+    </section>
+
     </main>
     <script src="/script.js"></script>
 </body>
